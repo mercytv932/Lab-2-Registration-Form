@@ -51,6 +51,21 @@
         border-color: #4f46e5;
         box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
       }
+
+      .password-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 24px;
+      }
+
+      .password-group input {
+        width: 100%;
+        padding: 14px 16px;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        outline: none;
+      }
     </style>
   </head>
   <body>
@@ -69,7 +84,9 @@
         <div class="input-group username">
           <label for="username">Username</label>
           <input type="text" placeholder="Choose a username" />
-          <small>3-20 characters, letters, numbers, and underscores only.</small>
+          <small
+            >3-20 characters, letters, numbers, and underscores only.</small
+          >
         </div>
 
         <div class="input-group email">
@@ -77,23 +94,33 @@
           <input type="text" placeholder="Enter your email address" />
         </div>
 
-        <div class="password-group">
-          <div class="password-group password">
+        <div class="password-container">
+          <div class="password-group">
             <label for="password">Password</label>
-            <input type="text" placeholder="create a password" />
-            <small>Minimum 8 characters with letters, numbers, and symbols.</small>
+            <input
+              type="password"
+              placeholder="create a password"
+              id="password"
+            />
+            <small
+              >Minimum 8 characters with letters, numbers, and symbols.</small
+            >
           </div>
-          <div class="password-group confirm">
+          <div class="password-group">
             <label for="confrim password">Confirm Password</label>
-            <input type="text" placeholder="confirm your password" />
+            <input
+              type="password"
+              placeholder="confirm your password"
+              id="confirm-password"
+            />
             <p>Password must match.</p>
           </div>
         </div>
+        <button class="register">Register Account</button>
+        <div class="main-footer">
+          <p>Already have an account? <span>Sign in</span></p>
+        </div>
       </form>
-      <button class="register">Register Account</button>
-      <div class="main-footer">
-        <p>Already have an account? <span>Sign in</span></p>
-      </div>
     </main>
   </body>
 </html>
