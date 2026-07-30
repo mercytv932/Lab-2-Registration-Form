@@ -4,6 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        padding: 40px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      form {
+        width: 100%;
+        max-width: 700px;
+        padding: 40px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        border-radius: 16px;
+        box-shadow: 0 12px 35px rgb(0, 0, 0, 0.1);
+      }
+
+      .main-header {
+        display: flex;
+        flex-direction: column;
+        font-style: sans-serif;
+      }
+
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 24px;
+      }
+      .input-group input {
+        width: 100%;
+        padding: 14px 16px;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        outline: none;
+      }
+
+      .input-group input:focus {
+        border-color: #4f46e5;
+        box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+      }
+    </style>
   </head>
   <body>
     <main>
@@ -21,7 +69,7 @@
         <div class="input-group username">
           <label for="username">Username</label>
           <input type="text" placeholder="Choose a username" />
-          <p>3-20 characters, letters, numbers, and underscores only.</p>
+          <small>3-20 characters, letters, numbers, and underscores only.</small>
         </div>
 
         <div class="input-group email">
@@ -33,7 +81,7 @@
           <div class="password-group password">
             <label for="password">Password</label>
             <input type="text" placeholder="create a password" />
-            <p>Minimum 8 characters with letters, numbers, and symbols.</p>
+            <small>Minimum 8 characters with letters, numbers, and symbols.</small>
           </div>
           <div class="password-group confirm">
             <label for="confrim password">Confirm Password</label>
@@ -41,9 +89,11 @@
             <p>Password must match.</p>
           </div>
         </div>
-        <button class="register">Register Account</button>
-        <div class="main-footer"></div>
       </form>
+      <button class="register">Register Account</button>
+      <div class="main-footer">
+        <p>Already have an account? <span>Sign in</span></p>
+      </div>
     </main>
   </body>
 </html>
