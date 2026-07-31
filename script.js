@@ -4,14 +4,13 @@ const usernameInput = document.querySelector("#username");
 const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
 const confirmPasswordInput = document.querySelector("#confirm-password");
+const inputs = document.querySelectorAll("input");
 
 const registerBtn = document.querySelector(".register");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-});
 
-registerBtn.addEventListener("click", () => {
   if (fullNameInput.value === "") {
     alert("Please enter your name!");
   } else if (usernameInput.value === "") {
@@ -40,6 +39,7 @@ registerBtn.addEventListener("click", () => {
     saveToLocal(userData);
 
     alert("Thanks for signing up!");
+    form.reset();
   }
 });
 
